@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="LoginJunitRunner" project="com.Karthickraja.TechAssesment3" tests="1" started="1" failures="1" errors="0" ignored="0">
+  <testsuite name="com.Karthickraja.TechAssesment3.LoginJunitRunner" time="8.175">
+    <testsuite name="User login to the demo application" time="8.175">
+      <testcase name="Verification of Login using valid credentials" classname="User login to the demo application" time="8.175">
+        <failure>java.lang.AssertionError: expected [true] but found [false]&#13;
+	at org.testng.Assert.fail(Assert.java:111)&#13;
+	at org.testng.Assert.failNotEquals(Assert.java:1578)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:57)&#13;
+	at org.testng.Assert.assertTrue(Assert.java:67)&#13;
+	at com.Karthickraja.TechAssesment3.LoginStepDefinition.user_logged_in_sucessfully(LoginStepDefinition.java:40)&#13;
+	at ✽.User logged in sucessfully(file:///C:/Users/kmuralidharan/Technical_Assesment_3/com.Karthickraja.TechAssesment3/src/test/resources/Feature/Login.feature:12)&#13;
+&#13;
+</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,17 @@
+Feature: Regsitering into Demo Web Shop Application
+ 
+Scenario:
+	Given user is on hompage
+	When user clicks on Register
+	Then user selects the gender
+	Then user enters the firstname
+		|firstname|karthick|
+	Then user enters the lastname
+		|lastname|raja|
+	Then user enters the emailid
+	|emailid|123qwerty@gmail.com|
+	Then user enters the password
+	|password|Qwerty|
+	Then user enters the confirmpassword
+	|confirmpassword|Qwerty|
+	Then user clicks the registerbutton

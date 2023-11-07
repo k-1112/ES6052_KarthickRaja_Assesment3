@@ -1,0 +1,42 @@
+package com.Karthickraja.TechAssesment3;
+
+import org.openqa.selenium.support.PageFactory;
+
+public class Register_Actions {
+	Register_Locator register_locator;
+	
+		public Register_Actions() {
+			this.register_locator = new Register_Locator();
+			PageFactory.initElements(Baseclass.getDriver(), register_locator);
+		}
+		
+		public void clickgender(){
+			register_locator.gender.click();
+		}
+		
+		public void setname(String Firstname) {
+			register_locator.firstname.sendKeys(Firstname);
+		}
+		public void setlastname(String Lastname) {
+			register_locator.lastname.sendKeys(Lastname);
+		}
+		public void setemail(String EmailId) {
+			register_locator.email.sendKeys(EmailId);
+		}
+		public void setPassword (String password) {
+			register_locator.password.sendKeys(password);
+		}
+		public void setConfirmpassword(String confirmPass) {
+			register_locator.confirmpassword.sendKeys(confirmPass);
+		}
+		
+		public void start(String Firstname, String Lastname, String EmailId, String password,String confirmPass ) {
+			setname(Firstname);
+			setlastname(Lastname);
+			setemail(EmailId);
+			setPassword(password);
+			setConfirmpassword(confirmPass);
+		}
+		
+		
+}

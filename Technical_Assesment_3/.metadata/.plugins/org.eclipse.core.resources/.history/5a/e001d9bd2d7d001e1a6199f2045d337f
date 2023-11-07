@@ -1,0 +1,9 @@
+Feature: Register the OpenCart application with correct parameters
+
+Scenario: User is able to register the application with correct credentilas
+
+Given: user go the webpage"https://demowebshop.tricentis.com/register"
+When: User clicks gender as male
+And: User enters firstname to application
+And: User given the last in register page
+And: user gives the Email

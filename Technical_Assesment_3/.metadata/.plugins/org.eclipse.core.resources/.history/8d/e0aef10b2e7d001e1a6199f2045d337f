@@ -1,0 +1,9 @@
+Feature: Register the Demo Web Shop application with correct parameters
+
+Scenario: Register the Application Demo web shop
+
+Given: user go the webpage"https://demowebshop.tricentis.com/register"
+When: User enters the valid credentials
+|	Firstname	|	Lastname	|	E-mail							|	Password	  |	ConfirmPassword	|
+|	Karthick	|	Raja			| km123@gmail.com		  |	ajaRK       |	ajaRK			      |
+Then: click the Register button

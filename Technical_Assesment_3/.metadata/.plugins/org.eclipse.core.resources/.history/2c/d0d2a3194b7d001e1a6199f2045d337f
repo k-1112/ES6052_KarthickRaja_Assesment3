@@ -1,0 +1,18 @@
+Feature: User login to the demo application
+ 
+Background:
+	Given User can login to the demo application
+	
+@ValidCredentials
+Scenario: Validate the login features with valid credentials
+ 
+When User provides valid username and password
+And User clicks log in
+Then User logged in the application successfully
+ 
+@InvalidCredentials
+Scenario: Validate the login features with valid credentials
+ 
+When User provides valid username and password
+And User clicks log in
+Then User has entered Invalid Credentials

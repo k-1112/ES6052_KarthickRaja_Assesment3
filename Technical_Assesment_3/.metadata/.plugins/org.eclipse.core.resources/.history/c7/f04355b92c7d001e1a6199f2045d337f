@@ -1,0 +1,5 @@
+Feature: Register the OpenCart application with correct parameters
+
+Scenario: User is able to register the application with correct credentilas
+
+Given: user go the webpage"https://www.opencart.com/index.php?route=account/register"

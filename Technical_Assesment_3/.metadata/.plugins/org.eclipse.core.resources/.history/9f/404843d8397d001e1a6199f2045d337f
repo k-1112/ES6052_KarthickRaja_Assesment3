@@ -1,0 +1,11 @@
+Feature: Register to demo web application
+ 
+Scenario: Registering the demo web application
+ 
+Given User is on register page "https://demowebshop.tricentis.com/"
+When User clicks gender
+And User provides the credentials
+	|	Firstname	|	Lastname	|	E-mail							|	Password	  |	ConfirmPassword	|
+	|	Sania			|	Mirza			|saniamirza@gmail.com	|	Sania@Mirza	|	Sania@Mirza			|
+	
+Then User successfully registered

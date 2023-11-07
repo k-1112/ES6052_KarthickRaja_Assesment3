@@ -1,0 +1,53 @@
+package com.Karthickraja.TechAssesment3;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class Login_StepDefinition {
+	@Given("user is on hompage")
+	public void user_is_on_hompage() {
+	   
+	}
+
+	@When("user clicks on Register")
+	public void user_clicks_on_register() {
+	   
+	}
+
+	@Then("user selects the gender")
+	public void user_selects_the_gender() {
+	    
+	}
+
+	@Then("user enters the firstname")
+	public void user_enters_the_firstname(io.cucumber.datatable.DataTable dataTable) {
+	    
+	}
+
+	@Then("user enters the lastname")
+	public void user_enters_the_lastname(io.cucumber.datatable.DataTable dataTable) {
+	    
+	}
+
+	@Then("user enters the emailid")
+	public void user_enters_the_emailid(io.cucumber.datatable.DataTable dataTable) {
+	    
+	}
+
+	@Then("user enters the password")
+	public void user_enters_the_password(io.cucumber.datatable.DataTable dataTable) {
+	    
+	}
+
+	@Then("user enters the confirmpassword")
+	public void user_enters_the_confirmpassword(io.cucumber.datatable.DataTable dataTable) {
+	    
+	}
+
+	@Then("user clicks the registerbutton")
+	public void user_clicks_the_registerbutton() {
+	    
+	}
+
+}

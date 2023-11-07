@@ -1,0 +1,17 @@
+package com.Karthickraja.TechAssesment3;
+
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+
+public class Hookclass {
+	@Before
+	public static void setup() {
+		Baseclass.setUpDriver();
+	}
+	
+	@After
+	public static void tearDown(Scenario scenario) {
+		Baseclass.tearDown();
+	}
+}

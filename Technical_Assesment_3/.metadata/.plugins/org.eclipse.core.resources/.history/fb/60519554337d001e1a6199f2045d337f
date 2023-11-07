@@ -1,0 +1,25 @@
+package com.Karthickraja.TechAssesment3;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class Register_Locator {
+		
+	@FindBy(xpath = "//input[@id='gender-male']")
+	public WebElement gender;
+	
+	@FindBy(xpath = "//input[@id='FirstName']")
+	public WebElement firstname;
+	
+	@FindBy(xpath = "//input[@id='LastName']")
+	public WebElement lastname;
+	
+	@FindBy(xpath = "//input[@id='Email']")
+	public WebElement email;
+	
+	@FindBy(xpath ="//input[@id='Password']")
+	public WebElement password;
+	
+	@FindBy(xpath = "//input[@id='ConfirmPassword']")
+	public WebElement confirmpassword;
+}

@@ -1,0 +1,20 @@
+package com.Karthickraja.TechAssesment3;
+
+import org.openqa.selenium.support.PageFactory;
+
+public class HomePage_Actions {
+		Homepage_locator homepage_locator;
+		
+		public HomePage_Actions(){
+			homepage_locator = new Homepage_locator();
+			
+			PageFactory.initElements(Baseclass.getDriver(), homepage_locator);
+		}
+		
+		public String verifyText() {
+			return homepage_locator.verifyText.getText();
+		}
+		public String VerifyErrorMessage() {
+			return homepage_locator.VerifyErrorMessage.getText();
+		}
+}

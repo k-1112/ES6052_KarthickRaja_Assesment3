@@ -1,0 +1,33 @@
+package com.Karthickraja.TechAssesment3;
+
+import org.openqa.selenium.support.PageFactory;
+
+public class LoginPage_Action {
+	Loginpage_Locator loginPage_Locators;
+	String strEmail, strPassword;
+	
+	public LoginPage_Action() {
+		this.loginPage_Locators = new Loginpage_Locator();
+		PageFactory.initElements(Baseclass.getDriver(), loginPage_Locators);
+	}
+	
+	public void setEmail(String strEmail) {
+		loginPage_Locators.email.sendKeys(strEmail);
+	
+		public void setEmail(String strEmail) {
+			loginPage_Locators.email.sendKeys(strEmail);
+		}
+		
+		public void setPassword(String strPassword) {
+			loginPage_Locators.password.sendKeys(strPassword);
+		}
+		
+		public void clickLogin() {
+			loginPage_Locators.loginBtn.click();
+		}
+		
+		public void login(String strEmail, String strPassword) {
+			this.setEmail(strEmail);
+			this.setPassword(strPassword);
+		}
+}

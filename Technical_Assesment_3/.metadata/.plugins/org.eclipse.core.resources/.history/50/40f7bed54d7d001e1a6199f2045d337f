@@ -1,0 +1,62 @@
+package com.Karthickraja.TechAssesment3;
+
+import org.testng.Assert;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class Login_StepDefinnition {
+	Login_Utility data = new Login_Utility();
+	LoginPage_Action objLogin = new LoginPage_Action();
+	HomePage_Actions objHome = new HomePage_Actions();
+	
+	
+	@Given("User is on DemoWebShop Home page")
+	public void user_is_on_demo_web_shop_home_page() {
+		Baseclass.openPage(data.strUrl);
+	    System.out.println("Home page");
+	}
+ 
+	@When("User clicks Login")
+	public void user_clicks_login() {
+		   objLogin.clickLoginPage();
+		   System.out.println("Login Page");
+ 
+ 
+	}
+ 
+	@When("User enters Email and Password")
+	public void user_enters_email_and_password() {
+		objLogin.login(data.strEmail, data.strPassword);
+		   System.out.println("Email and password");
+	}
+ 
+	@When("User clicks Remember me")
+	public void user_clicks_remember_me() {
+		objLogin.RemeberMe();
+		 System.out.println("Remember Me");
+ 
+	}
+ 
+	@When("User clicks login button")
+	public void user_clicks_login_button() {
+		   objLogin.clickLoginButton();
+		   System.out.println("login button");
+	}
+ 
+	@Then("User should be able to login sucessfully")
+	public void user_should_be_able_to_login_sucessfully() {
+		Assert.assertTrue(objHome.Text1().contains("kill@gamail.com"));
+		   System.out.println("sucessfull login");
+ 
+	}
+ 
+	@Then("Login will be unsucessful with error message")
+	public void login_will_be_unsucessful_with_error_message() {
+		Assert.assertTrue(objHome.ErrorMessage().contains("Login was unsuccessful. Please correct the errors and try again."));
+		   System.out.println("sucessfull login");
+ 
+	}
+ 
+}

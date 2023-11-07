@@ -1,0 +1,36 @@
+package com.Karthickraja.TechAssesment3;
+
+import java.util.List;
+import java.util.Map;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class Register_StepDefinition {
+
+		Register_Actions regis = new Register_Actions();
+	@Given("User is on register page {string}")
+	public void user_is_on_register_page(String string) {
+		System.out.println("Registerpage");
+	    Baseclass.openPage("https://demowebshop.tricentis.com/register");
+	}
+
+	@When("User clicks gender")
+	public void user_clicks_gender() {
+	    regis.clickgender();
+	}
+
+	@When("User provides the credentials")
+	public void user_provides_the_credentials(io.cucumber.datatable.DataTable dataTable) {
+		List<Map<String,String>> signUpForm = dataTable.asMaps(String.class,String.class);
+	    for(Map<String,String> data : signUpForm) {
+	    	String firstname =
+	}
+}
+	@Then("User successfully registered")
+	public void user_successfully_registered() {
+	    
+	}
+
+}

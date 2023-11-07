@@ -1,0 +1,45 @@
+package com.Karthickraja.TechAssesment3;
+
+import org.testng.Assert;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class Login_StepDefinnition {
+	Login_Utility data = new Login_Utility();
+	LoginPage_Action objLogin = new LoginPage_Action();
+	HomePage_Actions objHome = new HomePage_Actions();
+	
+	@Given("User can login to the demo application")
+	public void user_can_login_to_the_demo_application() {
+		Baseclass.openPage(data.url);
+	    System.out.println("login page");
+	    
+	}
+ 
+	@When("User provides valid username and password")
+	public void user_provides_valid_username_and_password() {
+		objLogin.login(data.email, data.password);
+		System.out.println("User logged in");
+	}
+ 
+	@When("User clicks log in")
+	public void user_clicks_log_in() {
+		objLogin.clickLogin();
+		System.out.println("User clicks login ");
+	    
+	}
+ 
+	@Then("User logged in the application successfully")
+	public void user_logged_in_the_application_successfully() {
+		Assert.assertTrue(objHome.getVerifyText().contains("Shopping cart"));
+		System.out.println("sucessfull login");
+	}
+ 
+	@Then("User has entered Invalid Credentials")
+	public void user_has_entered_invalid_credentials() {
+		objLogin.login(data.email1, data.password1);
+		System.out.println("User logged in with invalid credentials");
+	}
+}
